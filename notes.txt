@@ -1,0 +1,118 @@
+data types
+    integers
+    floating point numbers
+    strings
+    boolean
+    lists
+    range objects
+    tuples
+
+expression
+    consists of values and operators that always evaluate
+    ex. 2 + 2 where 2 is the value and + is the operator
+
+difference between statement and expression
+    statements = action or command ex. print()
+    expression = combo of variables, operations, and values that yield a result
+
+built in functions
+    str() = changes int to str
+    int() = changes str to int. can also round down float
+    float() = changes int to float
+    len() = integer value of char in str
+    range() = (start, stop [,step])
+    enumerate() = returns two values, index of the item and the item itself
+    .index() = the index of the value is returned
+    .appened() = method that adds to the end of a list
+    .insert() = method that adds anywhere. syntax = insert(index, 'new value')
+    .remove() = removes the value it's passed
+    del = removes the list or the item specified
+    .sort() = sorts items in list
+        sorts the lists in place. don't use to capture a return value
+        cannot sort lists with strings and integers
+        uses ASCIIbetical order = uppercase before lowercase then alphabetical
+    .sort(reverse=True) = reverses items in a list
+    .reverse() = reverses the items in a list. doesn't return a list
+    .sort(key=str.lower) = regular alphabetical order
+    tuple() = returns a tuple version of the values passed to it
+        tuple(['cat','dog',5]) will return ('cat','dog',5)
+    list() = returns a list version of the values passed to it
+        list(('cat','dog',5)) will return ['cat','dog',5]
+    copy() = 
+    deepcopy() =
+
+method is a function which belongs on an object
+
+print() has a new line
+
+operators
+    =  assignment
+    ** exponent
+    %  modulus/remainder
+    // integer division/floored quotient
+    /  division
+    *  multiplication
+    -  subtraction
+    +  addition
+
+comparison operators
+    == equal to
+    != not equal to
+    <  less than
+    >  greater than
+    <= less than or equal to
+    >= greater than or equal to
+
+boolean operators
+    and
+    or
+    not
+boolean operators always evaluate down to a boolean value
+True and True = True
+True and False = False
+
+order of operations for boolean operators
+    not - only operates on one value
+    and - both have to be true
+    or - only one needs to be true
+
+and truth tables
+    True and True = True
+    True and False = False
+    False and True = False
+    False and False = False
+
+or truth table
+    True and True = True
+    True and False = True
+    False and True = True
+    False and False = False
+
+(5 > 4) and (3 == 5)                evaluates to False
+not (5 > 4)                         evaluates to False
+(5 > 4) or (3 == 5)                 evaluates to True
+not ((5 > 4) or (3 == 5))           evaluates to False
+(True and True) and (True == False) evaluates to False
+(not False) or (not True)           evaluates to True
+
+functions
+    define = create
+    call = execute
+    pass = provide values
+    argument = values
+    parameter = variables with arguments
+    return value = what the function evaluates to
+        len('Hello') return value is 5
+    return statement = specifies what the return value should be
+        return 'It is certain' is a return statement
+
+lists
+    slices
+    ex. spam[0:4] = start at 0 and end at 4
+    first integer = where slice starts
+    second integer = where slice ends
+
+    multiple assignment trick = tuple unpacking
+
+    enumerate() = returns two values, index of the item and the item itself
+    enumberate(iterable,start=0)
