@@ -1,0 +1,62 @@
+1. What is []?
+a list
+
+2. How would you assign the value 'hello' as the third value in a list stored in a variable named spam? (Assume spam contains [2, 4, 6, 8, 10].)
+spam.insert(3, 'hello')
+
+For the following three questions, spam contains the list ['a', 'b', 'c', 'd'].
+3. What does spam[int(int('3' * 2) // 11)] evaluate to?
+d (index 3)
+'3' * 2 evaluates to '33'
+int('33') evaluates to 33
+33 // 11 evaluates to 3
+spam[int(3)] returns index 3, d
+
+4. What does spam[-1] evaluate to?
+'d'
+-1 is the last index in the list
+
+5. What does spam[:2] evaluate to?
+['a', 'b']
+
+For the following three questions, let’s say bacon contains the list [3.14, 'cat', 11, 'cat', True].
+6. What does bacon.index('cat') evaluate to?
+1
+
+7. What does bacon.append(99) make the list value in bacon look like?
+[3.14, 'cat', 11, 'cat', True, 99]
+
+8. What does bacon.remove('cat') make the list value in bacon look like?
+[3.14, 11, 'cat', True, 99]
+
+9. What are the operators for list concatenation and list replication?
++ and *
+
+10. What is the difference between the append() and insert() list methods?
+append() adds the item to the end of the list
+insert() adds the item where you specify insert(item, position)
+
+11. What are two ways to remove values from a list?
+remove() and del
+
+12. Name a few ways that list values are similar to string values.
+a string is similar to a list of individual letters making up a word
+they're both in an ordered sequence
+
+13. What is the difference between lists and tuples?
+lists are mutable and tuples are not
+
+14. How do you type the tuple value that has just the integer value 42 in it?
+value(42,)
+
+15. How can you get the tuple form of a list value? How can you get the list form of a tuple value?
+to get a tuple: tuple(['cat', 'dog', 5]) returns ('cat', 'dog', 5)
+to get a list : list(('cat', 'dog', 5)) returns ['cat','dog', 5]
+
+16. Variables that “contain” list values don’t actually contain lists directly. What do they contain
+instead?
+they contain a copy of the reference to the item in the list and use it for the parameter
+
+17. What is the difference between copy.copy() and copy.deepcopy()?
+copy.copy() will create a duplicate of a list or dictionary
+copy.deepcopy() will do the same but is used when there are lists within lists

@@ -26,6 +26,7 @@ built in functions
     .appened() = method that adds to the end of a list
     .insert() = method that adds anywhere. syntax = insert(index, 'new value')
     .remove() = removes the value it's passed
+    .slice() = returns object from list (start,end,step)
     del = removes the list or the item specified
     .sort() = sorts items in list
         sorts the lists in place. don't use to capture a return value
@@ -38,8 +39,8 @@ built in functions
         tuple(['cat','dog',5]) will return ('cat','dog',5)
     list() = returns a list version of the values passed to it
         list(('cat','dog',5)) will return ['cat','dog',5]
-    copy() = 
-    deepcopy() =
+    copy() = makes a duplicate copy of a mutable value like a list or dictionary
+    deepcopy() = used if there are nested lists. this will bring all lists
 
 method is a function which belongs on an object
 
@@ -49,8 +50,8 @@ operators
     =  assignment
     ** exponent
     %  modulus/remainder
-    // integer division/floored quotient
-    /  division
+    // division (integer)
+    /  division (float)
     *  multiplication
     -  subtraction
     +  addition

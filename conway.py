@@ -67,4 +67,4 @@ while True:
             else:
                 # everything else dies or stays dead
                 nextCells[x][y] = ' '
-        time.sleep(1)  # add a 1-second pause to reduce flickering
+    time.sleep(1)  # add a 1-second pause to reduce flickering
