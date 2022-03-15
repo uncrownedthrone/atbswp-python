@@ -12,10 +12,10 @@ a function when it is created. a function call is when it is invoked/called by t
 
 5. How many global scopes are there in a Python program? How many local scopes?
 1 global scope
-as many local scopes as needed
+local scopes are created whenever there is a new function
 
 6. What happens to variables in a local scope when the function call returns?
-it is destroyed
+variables are forgotten and local scope is destroyed
 
 7. What is a return value? Can a return value be part of an expression?
 what a function evaluates to
@@ -25,13 +25,13 @@ yes
 None
 
 9. How can you force a variable in a function to refer to the global variable?
-add global before the variable is defined
+add global before the variable. this will force it to refer to the global variable
 
 10. What is the data type of None?
 NoneType
 
 11. What does the import areallyourpetsnamederic statement do?
-imports the module by that named
+imports the module by that name
 
 12. If you had a function named bacon() in a module named spam, how would you call it after
 importing spam?
@@ -41,5 +41,5 @@ spam.bacon()
 use try/except
 
 14. What goes in the try clause? What goes in the except clause?
-try is the expression
-except is what to do if the try doesn't work so the program doesnt crash and keeps going
+try - code that could cause an error. what you're trying to evaluate
+except - code that executes if there is an error

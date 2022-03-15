@@ -1,0 +1,49 @@
+a dictionary is a mutable collection of many values. instead of indexes, like in lists, dictionaries use keys and it is associated with a value. this gives you a key-value pair.
+
+myCat = {'size': 'fat', 'color': 'gray','disposition': 'loud'}
+    keys: 'size', 'color', and 'disposition'
+    values: 'fat', 'gray', and 'loud'
+    myCat['size']
+        'fat'
+
+dictionaries vs lists
+    - unordered
+    - there is no 'first' in a dictionary
+    - order matters for lists, not for dictionaries to determine if they're the same
+    - unordered means they can't be sliced since there are no indexes
+    - unordered means you can more fully organize your own data how you see fit
+
+keys() values() and items() methods
+    these return 'list-like' values of the dict keys, values, or both key and value
+    keys() - returns keys
+    values() - returns values
+    items() - returns keys and values
+
+    not true lists. cannot be modified and can't use append()
+    these return a tuple
+    if you want a list, you have to list(spam.keys())
+
+    you can also use multiple assignment
+    spam = {'color': 'red', 'age': 42}
+    for k, v in spam.items():
+        print('Key ' + k + ' Value: ' + str(v))
+
+    use in or not in to check whether a key or value exists
+
+get()
+    takes two arguments
+        the key of the value to retrieve
+        fallback value to return if the value does not exists
+
+    picnicItems = {'apples': 5, 'cups': 2}
+    'I am bringing ' + str(picnicItems.get('cups', 0)) + ' cups.'
+    'I am bringing 2 cups.'
+
+setdefault()
+    takes two arguments
+        key to check for
+        value to set at that key if it doesn't exists
+
+import pprint
+    pprint.pprint(dictionary)
+    helpful when the dictionary contains nested lists or dictionaries

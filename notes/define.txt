@@ -4,6 +4,11 @@ data types
     strings/str = 'Hello world!'
     boolean = True/False
     lists = ['cat','rat','elephant'] mutable
-    tuple = ('hello','42','0.5')     immutable
+    tuple = ('hello','42','0.5') immutable
     range object = the object returned by range()
     enumerate = returns two values: index and item
+    dict_keys
+    dict_values
+    dict_items
+
+argument = parameter. whatever is taken in by the function
