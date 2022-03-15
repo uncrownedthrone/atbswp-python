@@ -1,0 +1,8 @@
+string concatenation and replication
+    'Alice' + 'Bob'
+    'AliceBob'
+
+    'Alice' * 5
+    'AliceAliceAliceAliceAlice'
+
+    these create new string values

@@ -1,0 +1,120 @@
+list is a data type
+    list value referes to the list itself, not the values inside the list
+    ex.
+        ['cat','bat','rat','elephant']
+
+    getting individual values in a list with indexes
+        spam = ['cat','bat','rat','elephant']
+        spam[0] returns 'cat'
+        spam[1] returns 'bat'
+
+        negative indexes return from the last to the beginnning
+        spam[-1] returns 'elephant'
+
+    getting a list from another list with slices
+        spam[2] is a list with an index
+        spam[1:4] is a list with a slice
+            1 = where the slice starts
+            4 = where the slice ends. goes up to but NOT including that index
+                slices evaluate to a new list value (which is not the values inside but the list)
+        shortcut, leave off either and it will default to 0 or the end
+
+    len() getting a list's length
+        spam = ['cat','bat','rat','elephant']
+        len(spam) returns 4
+
+    changing values in a list with indexes
+        spam = ['cat','bat','rat','elephant']
+        spam[1] = 'aardvark'
+        spam = ['cat','aardvark','rat','elephant']
+
+    del - remove values from lists with del
+        spam = ['cat','bat','rat','elephant']
+        del spam[2]
+        spam = ['cat','bat','elephant']
+
+    using for loops
+        supplies = ['pens', 'staplers', 'flamethrowers', 'binders']
+        for i in range(len(supplies)):
+            print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
+
+    in and not in
+        'howdy' in ['hello','hi','howdy','heyas']
+        True
+
+    multiple assignment trick (tuple unpacking)
+        instead of this:
+        cat = ['fat', 'gray', 'loud']
+        size = cat[0]
+        color = cat[1]
+        disposition = cat[2]
+            this assigns a variable to each list item
+
+        you can type this:
+        cat = ['fat', 'gray', 'loud']
+        size, color, disposition = cat
+
+    enumerate()
+        supplies = ['pens', 'staplers', 'flamethrowers', 'binders']
+        for index, item in enumerate(supplies):
+            print('Index ' + str(index) + ' in supplies is: ' + item)
+
+    import random - random module
+        random.choice(listName) = chooses a random list item
+        random.shuffle(listName) = shuffles in place, does not modify or return new one
+
+    index() - find a value with index()
+        spam = ['hello', 'hi', 'howdy', 'heyas']
+        spam.index('hello') returns 0
+        returns the first instance if there is more than one item with that name
+
+    append() and insert() - add values to a list
+        append() = adds to the end of the list
+        insert() = takes in the index you want it to go to and the item to add
+            insert(1, 'chicken')
+
+    remove() - remove a value from a list
+        remove() = takes in the item listed and removes it. if there are multiple, it will
+        remove only the first instance
+        del = used when you know the index of the value you want to remove
+        remove() = used when you know the value you want to remove
+
+    sort()
+        sorts the list in place. does not return a value
+        cannot sort list with integers and strings
+        uses ASCIIbetical order. to use alphabetical order:
+            spam = ['a', 'z', 'A', 'Z']
+            spam.sort(key=str.lower)
+            ['a', 'A', 'z', 'Z']
+
+    reverse()
+        reverses a list in place. does not return a value
+        spam = ['cat', 'dog', 'moose']
+        spam.reverse()
+        ['moose', 'dog', 'cat']
+
+    tuple()
+        returns a tuple version of the values passed to it
+        handy if you need a mutable version of a tuple value
+        immutable. cannot change like str
+        use if you need a specific ordered sequence of values that never change
+        since they can't change, python can optimize to run slightly faster than
+        when you use lists
+
+    variables only contain a REFERENCE to the value, not the value itself
+
+    passing references
+        when a function (eggs) is called, the value of the arguments (spam) are copied to the parameter variables. if the argument is a list, a copy of the reference (id) is used for the parameter (parameter)
+
+        def eggs(parameter):
+            parameter.append('Hello')
+
+        spam = [1, 2, 3]
+        eggs(spam)
+        print(spam)
+        [1, 2, 3, 'Hello']
+
+    copy() and deepcopy() import copy
+        use this if you don't want to modify the original list/dictionary like above. since that's only a reference to the original, it will be modfified.
+        copy() = makes a duplicate copy of the list
+        deepcopy() = makes a duplicate copy of the list and any sublists

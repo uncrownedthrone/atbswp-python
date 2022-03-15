@@ -1,12 +1,3 @@
-data types
-    integers
-    floating point numbers
-    strings
-    boolean
-    lists
-    range objects
-    tuples
-
 expression
     consists of values and operators that always evaluate
     ex. 2 + 2 where 2 is the value and + is the operator

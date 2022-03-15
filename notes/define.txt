@@ -1,0 +1,9 @@
+data types
+    integer/int = 42
+    float/float = 42.42
+    strings/str = 'Hello world!'
+    boolean = True/False
+    lists = ['cat','rat','elephant'] mutable
+    tuple = ('hello','42','0.5')     immutable
+    range object = the object returned by range()
+    enumerate = returns two values: index and item
