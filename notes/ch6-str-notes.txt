@@ -74,4 +74,43 @@ join() and split() methods
     most common use is to split multiline strings along the newline characters
 
 partition() method
-    
+    splits a string into the text before and after the separator string. it searches for the separator string and returns a tuple of three substrings:
+        before,
+        separator,
+        after
+    if the separator string is in there multiple times, it will return the first
+    'Hello, world!'.partition('w')
+        ('Hello','w','orld!')
+
+    use multiple assignment trick to assign to variables:
+        before, sep, after = 'Hello, world!'.partion(' ')
+            returns
+            before = 'Hello,'
+            after = 'world!'
+
+        useful for splitting a string whenever you need the parts before, including, and after a particular separator string.
+
+rjust(), ljust(), center() methods picnicItems.py
+    returns a padded version of the string they are called
+    takes in an integer to add in spaces. note: also depends on the length of the string.
+    to justify 'Hello' 10 spaces, you would need to rjust(15)
+    you can add an optional fill character as a second argument
+
+strip(), rstrip(), lstrip()
+    strips whitespace characters (space, tab, newline)
+    strip() = returns new string without any whitespace at beginning and end
+    rstrip() = returns new string with whitespace stripped from right
+    lstrip() = returns new string with whitespace stripped from left
+
+    you can also specific which characters to remove at the ends
+        spam = 'SpamSpamBaconSpamEggsSpamSpam'
+        spam.strip('ampS')
+            'BaconSpamEggs'
+        adding 'ampS' removes all a, m, p, and capital S
+        same as 'mapS' and 'Spam'
+
+ord() and chr()
+    ord() = gives you the code point of a one-character string
+    chr() = gives you the code point of a one-character integer
+
+    useful when you need to do an ordering or mathematical operation on characters
