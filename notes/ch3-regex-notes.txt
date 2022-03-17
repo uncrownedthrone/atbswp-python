@@ -1,0 +1,44 @@
+regex module = import re
+
+re.compile()
+    returns a regex pattern object/regex object
+
+re.search()
+    searches the string it's passed for any matches to the regex
+    will return None if it's not found in the string
+    will return Match object, which have a group() method that will return the actual
+    matched text form the searched string
+
+    use re.complile() to define the regex you want to search with
+    use spam.search() to pass it the string you want to search
+    use spam.group() to return the matched text if there is any
+
+grouping with ()
+    creates groups within the regex that you can call on individually
+    passing 0 or nothing will return the entire group
+
+    phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+    mo = phoneNumRegex.search('My number is 415-555-4242')
+    mo.group(1)
+        '415'
+    mo.group(2)
+        '555-4242'
+
+    to grab all groups, use groups() <-- see plural. returns a tuple
+    remember you can use the multiple assignment trick as well
+
+ensure the use of escape characters since you're using raw strings
+    not .   ^   $   *   +   ?   {   }   [   ]   \   |   (   )
+    use \.  \^  \$  \*  \+  \?  \{  \}  \[  \]  \\  \|  \(  \)
+
+match multiple groups with pipe
+    only the first occurrence is returned
+    findall() to find all of the matching occurrences
+
+optional matching with ?
+    will match zero or one instance
+    ex. using it to optionally look for area codes
+
+*  match zero or more
++  match one or more
+{} match specific repetitions
