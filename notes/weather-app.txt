@@ -1,0 +1,9 @@
+lat: 27.9845
+long: -82.463
+
+TODO
+[x] good morning msg
+[x] sunset/sunrise
+[ ] current temp
+[ ] h/l
+[ ] goodbye msg
